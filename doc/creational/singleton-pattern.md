@@ -118,7 +118,7 @@ class Settings{
     }
 }
 ```
-자바의 `synchronized`키워드를 추가한 `getInstance()`를 호출하면 해당 메서드에 `락 - rock`을 걸어 **처음 접근한 쓰레드 이외의 다른 스레드가 접근할 수 없도록 하여** `thread-safe`한 싱글톤 객체를 만들 수 있다.
+자바의 `synchronized`키워드를 추가한 `getInstance()`를 호출하면 해당 메서드에 `락 - lock`을 걸어 **처음 접근한 쓰레드 이외의 다른 스레드가 접근할 수 없도록 하여** `thread-safe`한 싱글톤 객체를 만들 수 있다.
 
 하지만...  
 **`getInstance()`를 호출할 때 매번 락이 걸리므로 성능상 그렇게 좋지는 않다.**
