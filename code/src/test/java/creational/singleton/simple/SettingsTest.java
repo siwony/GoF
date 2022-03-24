@@ -1,11 +1,11 @@
-package creational.factory_method.simple;
+package creational.singleton.simple;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SettingsTest {
 
@@ -34,7 +34,7 @@ class SettingsTest {
         b.start();
         c.start();
 
-        Thread.sleep(1000);
+        Thread.sleep(1500);
         Settings settings1 = settingsList.get(0);
         Settings settings2 = settingsList.get(1);
         Settings settings3 = settingsList.get(2);

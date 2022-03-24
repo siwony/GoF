@@ -1,4 +1,4 @@
-package creational.factory_method.threadSafe;
+package creational.singleton.threadSafe;
 
 class UseStaticInnerClass {
 

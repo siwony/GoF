@@ -1,4 +1,4 @@
-package creational.factory_method.simple;
+package creational.singleton.simple;
 
 class Settings {
 
