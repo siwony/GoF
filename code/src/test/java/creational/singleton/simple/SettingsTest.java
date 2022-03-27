@@ -12,7 +12,6 @@ class SettingsTest {
     @Test
     public void settingsTest(){
         Settings settings = Settings.getInstance();
-
         assertEquals(settings, Settings.getInstance());
     }
 

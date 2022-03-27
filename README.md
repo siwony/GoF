@@ -1,5 +1,5 @@
 # Gang of Four 디자인 패턴
-GoF의 디자인패턴은 `에리히 감마(Erich Gamma)`, 리`처드 헬름(Richard Helm)`, `랄프 존슨(Ralph Johnson)`, `존 블리시데스(John Vlissides)`가 소프트웨어 공학에서 가장 많이 사용되는 23개의 패턴을 구체화 한 것이다.
+GoF의 디자인패턴은 `에리히 감마(Erich Gamma)`, `리처드 헬름(Richard Helm)`, `랄프 존슨(Ralph Johnson)`, `존 블리시데스(John Vlissides)`가 소프트웨어 공학에서 가장 많이 사용되는 23개의 패턴을 구체화 한 것이다.
 
 GoF의 디자인 패턴은 목적에 따라 3가지의 패턴으로 분류할 수 있다.
 > 생성, 구조, 행동
@@ -35,4 +35,5 @@ GoF의 디자인 패턴은 목적에 따라 3가지의 패턴으로 분류할 �
 - `템플릿 메서드 - Template Method`
 - `방문자 - Visitor`
 
-이 Repository는 백기선님의 [코딩으로 학습하는 GoF의 디자인 패턴](https://www.inflearn.com/course/디자인-패턴/dashboard)을 기반으로 작성되었습니다.
+이 Repository는 백기선님의 [코딩으로 학습하는 GoF의 디자인 패턴](https://www.inflearn.com/course/디자인-패턴/dashboard)을 기반으로 작성되었습니다.  
+그리고 패턴 구현에 초점이 맞춰저 있어 자바의 문법/기능적인 부분이 매우 많이 들어갈 예정입니다.
