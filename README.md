@@ -8,7 +8,7 @@ GoF의 디자인 패턴은 목적에 따라 3가지의 패턴으로 분류할 �
 객체의 생성에 관련된 패턴이다.
 - `추상 팩토리 - Abstract Factory`
 - `빌더 - Builder`
-- `팩토리 메서드Factory Method`
+- [`팩토리 메서드 - Factory Method`](doc/creational/factory-method-pattern.md)
 - `프로토타입 - Prototype`
 - [`싱글톤 - Singleton`](doc/creational/singleton-pattern.md)
 

@@ -399,7 +399,7 @@ public void useSerializeAndDeserialize() throws IOException, ClassNotFoundExcept
 
 ## 4. 실무에서는 어떻게 사용될까?
 - Spring의 Bean scope중 싱글톤
-  > 하지만 이건 JVM내에서 
+  > Java와 Spring에서의 싱글톤 차이점은 객체의 생명주기가 다르다, Java는 `Class loader`기준, Spring에서는 `ApplicationContext`가 기준이 된다.
 - `java.lang.Runtime`
 - 여러 디자인 패턴들의 구현체의 일부로 사용된다.
   > 빌더, 퍼사드, 추상 팩토리 등...
