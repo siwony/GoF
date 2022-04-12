@@ -9,7 +9,7 @@ class Whiteship extends Ship {
 
     private Anchor anchor;
 
-    private Wheel logo;
+    private Wheel wheel;
 
     public Whiteship() {
         setName("whiteship");

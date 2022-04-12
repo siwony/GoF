@@ -5,6 +5,8 @@
 - "**팩토리를 사용하는 방법**"에 초첨을 둔다.
   > 관련있는 여러 객체를 구체적인 클래스에 의존하지 않고 만들 수 있게 해주는 것이 목적이다.
 
+  <img src="img/abstract-factory.png">
+
 ## Java와 Spring에서 찾아보는 팩토리 메소드 패턴
 ### 자바 라이브러리
 - javax.xml.xpath.XPathFactory#newInstance()
