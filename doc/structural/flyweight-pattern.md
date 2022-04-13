@@ -17,3 +17,9 @@
 
 ### 단점
 - 코드의 복잡도가 증가한다.
+
+## 실무에서의 예시
+### Java
+#### Wrapper Class의 `valueOf`
+Integer의 valueOf 메서드를 보면 [(공식문서)](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html#valueOf(int))  
+자주 사용하는 숫자와 -128 ~ 127 범위의 숫자를 캐싱한다고 나와있다.
