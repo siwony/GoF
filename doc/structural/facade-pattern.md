@@ -66,13 +66,14 @@ class CustomOAuth2UserService(
 코드를 보면 `delegateOauth2UserService`를 통해 OAuth2로 로그인한 유저의 정보를 가져오고 그 정보를 가지고 `userAuthService.authentication(oauthAttributes)`구문을 통해 인증을 진행한다. 만약 OAuth2로그인이 처음이라면 주석에 나와있듯이 계정을 서버에 등록한다.
 
 ### 해당 코드의 개선할 사항
+> 부제: 문제의 3줄 코드 
 ```kotlin
 if(workerRepository.existsByGithubId(oauthAttributes.id))
     userRegistrationService.registration(oauthAttributes)
 
 val loginUser : User = userAuthService.authentication(oauthAttributes)
 ```
-- 만약 비즈니스 요구사항으로 인해 인증로직을 변경하게 된다면 client코드인 `CustomOAuth2UserService.loadUser`메서드를 수정해야 한다.
+- 만약 비즈니스 요구사항으로 인해 인증로직(해당 3줄)을 변경하게 된다면 client코드인 `CustomOAuth2UserService.loadUser`메서드를 수정해야 한다.
     > 이는 변경에 열려 있으므로 OCP에 위배된다.
 - 저 3줄을 위해 3개의 의존성이 필요하다.
   > `WorkerRepository`, `UserRegistrationService`, `UserAuthService`
@@ -80,7 +81,7 @@ val loginUser : User = userAuthService.authentication(oauthAttributes)
 이러한 단점을 보완하기 위해 퍼사드 패턴을 이용한 리펙토링을 진행하게 되었다.
 
 #### 1. Facade Pattern에 사용될 interface생성
-위 3줄의 코드는 OAuth 인증절차를 실행하는 코드이다 이를 그대로 퍼사드 페턴에 옮길 예정이므로 interface의 이름을  `OAuthProcessorFacade`라 지었다.
+위 문제의 3줄의 코드는 OAuth 인증절차를 실행하는 코드이다 이를 그대로 퍼사드 패턴에 옮길 예정이므로 interface의 이름을  `OAuthProcessorFacade`라 지었다.
 > 뒤에 접미사로 Facade를 붙인 이유는 퍼사드 패턴을 직관적으로 파악하기 위함이다.
 ```kotlin
 /**
@@ -165,3 +166,8 @@ class OAuth2ProcessorFacadeImpl(
 이렇게 간단하게 퍼사드 패턴을 구현했다.
 
 만약 OAuth에 인증 로직(`OAuth2ProcessorFacadeImpl.process`)를 다른 로직으로 바꾸고 싶다면, 다른 서브 클래스를 만들어 `OAuth2ProcessorFacadeImpl`를 대체하면 끝난다.
+
+#### 해당 코드의 UML은 다음과 같다.
+> WorkerRepository는 귀찮아서 뻈다.
+
+<img src="img/facade-pattern-impl.png">
