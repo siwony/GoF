@@ -17,7 +17,7 @@ GoF의 디자인 패턴은 목적에 따라 3가지의 패턴으로 분류할 �
 - `어댑터 - Adapter`
 - `브리지 - Bridge`
 - `컴포지드 - Composite`
-- `퍼사드 - Facade`
+- [`퍼사드 - Facade`](doc/structural/facade-pattern.md)
 - [`플라이웨이트 - Flyweight`](doc/structural/flyweight-pattern.md)
 - `프록시 - Proxy`
 
